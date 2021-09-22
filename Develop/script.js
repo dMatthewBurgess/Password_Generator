@@ -104,4 +104,24 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-var passwordLenght = prompt("Enter the lenght of your password")
+var passwordLenght = prompt("Enter the lenght of your password");
+if(parseInt(passwordLenght) >= 8 && parseInt(passwordLenght <= 128)){
+  alert("Please enter a proper password");
+}
+else if (passwordLenght < 8 || passwordLenght > 128){
+  passwordLenght = parseInt(prompt("Please choose a number between 8 and 128"));
+}
+else {
+  confirmNumber = confirm("Do you want your password to contain numbers?");
+  confirmCharacter = confirm("Do you want this password to contain special characters?");
+  confirmUppercase = confirm("Do you want this password to contain Uppercase letters?");
+  confirmLowercase = confirm("Do you want this password to contain lowercanse letters?");
+}
+
+
+combineArrays = [];
+
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  
+}
