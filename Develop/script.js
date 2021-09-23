@@ -121,13 +121,16 @@ else {
   confirmCharacter = confirm("Do you want this password to contain special characters?");
   confirmUppercase = confirm("Do you want this password to contain Uppercase letters?");
   confirmLowercase = confirm("Do you want this password to contain lowercanse letters?");
+// Else if statments for building password
+  if (confirmCharacter){
+    choices = character.concat(specialCharaters);
+  }
+
 };
 
-// Else if statments for building password
 
-else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase);{
-  choices = character.concat(specialCharaters, numericCharacters, upperCasedCharacters, lowerCasedCharacters);
-}
+
+
 
 else if (confirmCharacter && confirmNumber && confirmUppercase);{
   choices = character.concat(specialCharaters, numericCharacters, upperCasedCharacters);
