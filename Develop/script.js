@@ -122,14 +122,64 @@ else {
   confirmUppercase = confirm("Do you want this password to contain Uppercase letters?");
   confirmLowercase = confirm("Do you want this password to contain lowercanse letters?");
 };
-else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase){
-  choices = character.concat()
+
+// Else if statments for building password
+
+else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase);{
+  choices = character.concat(specialCharaters, numericCharacters, upperCasedCharacters, lowerCasedCharacters);
 }
 
+else if (confirmCharacter && confirmNumber && confirmUppercase);{
+  choices = character.concat(specialCharaters, numericCharacters, upperCasedCharacters);
+}
 
-combineArrays = [];
+else if (confirmCharacter && confirmNumber && confirmLowercase)
+choices = character.concat(specialCharaters, numericCharacters, lowerCasedCharacters);
 
-for (let index = 0; index < array.length; index++) {
-  const element = array[index];
-  
+else if (confirmCharacter && confirmUppercase && confirmLowercase){
+  choices = character.concat(specialCharaters, upperCasedCharacters);
+}
+else if (confirmNumber && confirmUppercase && confirmLowercase);{
+  choices = character.concat(numericCharacters, upperCasedCharacters, lowerCasedCharacters);
+}
+else if (confirmCharacter && confirmNumber);{
+  choices = character.concat(specialCharaters, numericCharacters);
+}
+else if (confirmCharacter && confirmLowercase);{
+  choices = character.concat(specialCharaters, lowerCasedCharacters);
+}
+else if (confirmCharacter && confirmUppercase);{
+  choices = character.concat(specialCharaters, upperCasedCharacters);
+}
+else if (confirmLowercase && confirmNumber);{
+  choices = character.concat(lowerCasedCharacters, numericCharacters);
+}
+else if (confirmLowercase && confirmUppercase);{
+  choices = character.concat(lowerCasedCharacters, upperCasedCharacters);
+}
+else if (confirmNumber && confirmUppercase);{
+  choices = character.concat(numericCharacters, upperCasedCharacters);
+}
+else if (confirmNumber) {
+  choices = numericCharacters;
+}
+else if (confirmLowercase) {
+  choices = lowerCasedCharacters;
+}
+else if (confirmUppercase) {
+  choices = upperCasedCharacters;
+}
+else if (confirmCharacter) {
+  choices = specialCharaters;
+}
+
+// Empty array for password
+
+var writePassword = [];
+
+// loop to build password
+
+for (var i = 0; i < enter; i++) {
+  var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+  password.push(pickChoices);
 }
