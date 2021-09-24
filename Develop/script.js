@@ -1,9 +1,11 @@
+var choices = []
+var character = []
 var confirmCharacter
 var confirmNumber
 var confirmUppercase
 var confirmLowercase
 
-var specialCharaters = [
+var specialCharacters = [
   '@',
   '%',
   '+',
@@ -123,66 +125,75 @@ else {
   confirmLowercase = confirm("Do you want this password to contain lowercanse letters?");
 // Else if statments for building password
   if (confirmCharacter){
-    choices = character.concat(specialCharaters);
+    character = character.concat(specialCharacters);
+  }
+  if (confirmNumber){
+    character = character.concat(numericCharacters);
+  }
+ if (confirmLowercase){
+    character = character.concat(lowerCasedCharacters);
+  }
+  if (confirmUppercase){
+    character = character.concat(upperCasedCharacters)
   }
 
-};
+};console.log(character)
 
 
 
 
 
-else if (confirmCharacter && confirmNumber && confirmUppercase);{
-  choices = character.concat(specialCharaters, numericCharacters, upperCasedCharacters);
-}
+// else if (confirmCharacter && confirmNumber && confirmUppercase);{
+//   choices = character.concat(specialCharaters, numericCharacters, upperCasedCharacters);
+// }
 
-else if (confirmCharacter && confirmNumber && confirmLowercase)
-choices = character.concat(specialCharaters, numericCharacters, lowerCasedCharacters);
+// else if (confirmCharacter && confirmNumber && confirmLowercase)
+// choices = character.concat(specialCharaters, numericCharacters, lowerCasedCharacters);
 
-else if (confirmCharacter && confirmUppercase && confirmLowercase){
-  choices = character.concat(specialCharaters, upperCasedCharacters);
-}
-else if (confirmNumber && confirmUppercase && confirmLowercase);{
-  choices = character.concat(numericCharacters, upperCasedCharacters, lowerCasedCharacters);
-}
-else if (confirmCharacter && confirmNumber);{
-  choices = character.concat(specialCharaters, numericCharacters);
-}
-else if (confirmCharacter && confirmLowercase);{
-  choices = character.concat(specialCharaters, lowerCasedCharacters);
-}
-else if (confirmCharacter && confirmUppercase);{
-  choices = character.concat(specialCharaters, upperCasedCharacters);
-}
-else if (confirmLowercase && confirmNumber);{
-  choices = character.concat(lowerCasedCharacters, numericCharacters);
-}
-else if (confirmLowercase && confirmUppercase);{
-  choices = character.concat(lowerCasedCharacters, upperCasedCharacters);
-}
-else if (confirmNumber && confirmUppercase);{
-  choices = character.concat(numericCharacters, upperCasedCharacters);
-}
-else if (confirmNumber) {
-  choices = numericCharacters;
-}
-else if (confirmLowercase) {
-  choices = lowerCasedCharacters;
-}
-else if (confirmUppercase) {
-  choices = upperCasedCharacters;
-}
-else if (confirmCharacter) {
-  choices = specialCharaters;
-}
+// else if (confirmCharacter && confirmUppercase && confirmLowercase){
+//   choices = character.concat(specialCharaters, upperCasedCharacters);
+// }
+// else if (confirmNumber && confirmUppercase && confirmLowercase);{
+//   choices = character.concat(numericCharacters, upperCasedCharacters, lowerCasedCharacters);
+// }
+// else if (confirmCharacter && confirmNumber);{
+//   choices = character.concat(specialCharaters, numericCharacters);
+// }
+// else if (confirmCharacter && confirmLowercase);{
+//   choices = character.concat(specialCharaters, lowerCasedCharacters);
+// }
+// else if (confirmCharacter && confirmUppercase);{
+//   choices = character.concat(specialCharaters, upperCasedCharacters);
+// }
+// else if (confirmLowercase && confirmNumber);{
+//   choices = character.concat(lowerCasedCharacters, numericCharacters);
+// }
+// else if (confirmLowercase && confirmUppercase);{
+//   choices = character.concat(lowerCasedCharacters, upperCasedCharacters);
+// }
+// else if (confirmNumber && confirmUppercase);{
+//   choices = character.concat(numericCharacters, upperCasedCharacters);
+// }
+// else if (confirmNumber) {
+//   choices = numericCharacters;
+// }
+// else if (confirmLowercase) {
+//   choices = lowerCasedCharacters;
+// }
+// else if (confirmUppercase) {
+//   choices = upperCasedCharacters;
+// }
+// else if (confirmCharacter) {
+//   choices = specialCharaters;
+// }
 
-// Empty array for password
+// // Empty array for password
 
-var writePassword = [];
+// var writePassword = [];
 
-// loop to build password
+// // loop to build password
 
-for (var i = 0; i < enter; i++) {
-  var pickChoices = choices[Math.floor(Math.random() * choices.length)];
-  password.push(pickChoices);
-}
+// for (var i = 0; i < enter; i++) {
+//   var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+//   password.push(pickChoices);
+// }
