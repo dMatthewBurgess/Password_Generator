@@ -110,6 +110,8 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+function generatePassword(){
+
 
 var passwordLenght = prompt("Enter the lenght of your password");
 if(parseInt(passwordLenght) >= 8 && parseInt(passwordLenght <= 128)){
@@ -137,59 +139,13 @@ else {
     character = character.concat(upperCasedCharacters)
   }
 
-};console.log(character)
+ };console.log(character)
 
 
 
+//  use a for loop to get values out of Array. after determining the password set use a return statemt to the code
+}
 
-
-// else if (confirmCharacter && confirmNumber && confirmUppercase);{
-//   choices = character.concat(specialCharaters, numericCharacters, upperCasedCharacters);
-// }
-
-// else if (confirmCharacter && confirmNumber && confirmLowercase)
-// choices = character.concat(specialCharaters, numericCharacters, lowerCasedCharacters);
-
-// else if (confirmCharacter && confirmUppercase && confirmLowercase){
-//   choices = character.concat(specialCharaters, upperCasedCharacters);
-// }
-// else if (confirmNumber && confirmUppercase && confirmLowercase);{
-//   choices = character.concat(numericCharacters, upperCasedCharacters, lowerCasedCharacters);
-// }
-// else if (confirmCharacter && confirmNumber);{
-//   choices = character.concat(specialCharaters, numericCharacters);
-// }
-// else if (confirmCharacter && confirmLowercase);{
-//   choices = character.concat(specialCharaters, lowerCasedCharacters);
-// }
-// else if (confirmCharacter && confirmUppercase);{
-//   choices = character.concat(specialCharaters, upperCasedCharacters);
-// }
-// else if (confirmLowercase && confirmNumber);{
-//   choices = character.concat(lowerCasedCharacters, numericCharacters);
-// }
-// else if (confirmLowercase && confirmUppercase);{
-//   choices = character.concat(lowerCasedCharacters, upperCasedCharacters);
-// }
-// else if (confirmNumber && confirmUppercase);{
-//   choices = character.concat(numericCharacters, upperCasedCharacters);
-// }
-// else if (confirmNumber) {
-//   choices = numericCharacters;
-// }
-// else if (confirmLowercase) {
-//   choices = lowerCasedCharacters;
-// }
-// else if (confirmUppercase) {
-//   choices = upperCasedCharacters;
-// }
-// else if (confirmCharacter) {
-//   choices = specialCharaters;
-// }
-
-// // Empty array for password
-
-// var writePassword = [];
 
 // // loop to build password
 
